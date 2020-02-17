@@ -1,0 +1,40 @@
+.col-center {
+  margin: auto;
+  float: none;
+
+}
+
+.center {
+  margin: 50px;
+  border: 2px outset;
+  padding: 25px;
+  padding-right: 0;
+  padding-top: 20px;
+  transition: .5s ease;
+  top: 50%;
+  left: 50%;
+}
+
+button {
+  background-color: blanchedalmond;
+}
+
+.for {
+  background-color: blanchedalmond;
+  border: 2px ridge;
+  display: inline-block;
+  margin: 20px;
+  padding: 15px;
+  margin-left: 40px;
+}
+
+.for:hover {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  background-color: rgb(122, 211, 211);
+
+}
+
+
+* {
+  text-align: center;
+}

@@ -1,0 +1,41 @@
+<br>
+<div class="col-center col-lg-4 col-lg-offset-4">
+  <div class="input-group">
+    <input list="cities" type="text" class="form-control" placeholder="tel aviv" [(ngModel)]="loction"
+      (ngModelChange)="auto($event)">
+    <datalist id="cities" *ngFor="let city of citiesArr">
+      <option value="{{city}}">
+    </datalist>
+
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button" (click)="getWeather()">Go!</button>
+    </span>
+  </div>
+</div>
+
+<div _ngcontent-hvo-c15="" class="container ">
+  <div _ngcontent-hvo-c15="" class="col-center center row">
+    <div _ngcontent-hvo-c15="" class="col-center col-lg-4 col-md-offset-11">
+      now the weather at: {{location}}<br>
+      is: {{Current}} F
+    </div>
+    <div _ngcontent-hvo-c15="" class=" col-center col-lg-4 col-md-offset-0 ">
+      <button type="button" (click)="favorites()"> Add to Favorites</button>
+
+    </div>
+  </div>
+  <b> the weather for the following days:
+  </b>
+  <div class="col-center center row">
+    <div *ngFor="let key of Forecasts">
+      <div class="for col-xs-6"><u>In date:</u><br>{{key.Date}}
+        <br>
+        <u>the weather will be:</u><br>{{key.Temperature.Minimum.Value}} F </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<ng-content></ng-content>
